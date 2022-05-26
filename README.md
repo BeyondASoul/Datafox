@@ -10,5 +10,6 @@ pip install -r requirements.txt
 Para ejecutar el programa, se debe buscar el archivo app.py y ejecutase con python.
 El directorio donde se puede encontrar este archivo es en 
 ```
-\datafox\src\
+cd \datafox\src\
+python3 app.py
 ```
