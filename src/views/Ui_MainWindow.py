@@ -1,0 +1,101 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'MainWindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.14.1
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(1080, 720)
+        MainWindow.setMaximumSize(QtCore.QSize(1080, 720))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/img/img/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
+        MainWindow.setStyleSheet("")
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setObjectName("gridLayout")
+        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
+        self.tabWidget.setSizePolicy(sizePolicy)
+        self.tabWidget.setMinimumSize(QtCore.QSize(120, 0))
+        self.tabWidget.setObjectName("tabWidget")
+        self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 9)
+        self.buttonAbrir = QtWidgets.QPushButton(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setWeight(50)
+        self.buttonAbrir.setFont(font)
+        self.buttonAbrir.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.buttonAbrir.setFlat(True)
+        self.buttonAbrir.setObjectName("buttonAbrir")
+        self.gridLayout.addWidget(self.buttonAbrir, 3, 2, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem, 3, 0, 1, 1)
+        self.load_screen = QtWidgets.QWidget(self.centralwidget)
+        self.load_screen.setMaximumSize(QtCore.QSize(16777215, 500))
+        self.load_screen.setObjectName("load_screen")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.load_screen)
+        self.gridLayout_2.setContentsMargins(5, 5, 5, 5)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.logo = QtWidgets.QLabel(self.load_screen)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.logo.sizePolicy().hasHeightForWidth())
+        self.logo.setSizePolicy(sizePolicy)
+        self.logo.setMaximumSize(QtCore.QSize(500, 404))
+        self.logo.setText("")
+        self.logo.setPixmap(QtGui.QPixmap(":/img/img/datafox.png"))
+        self.logo.setScaledContents(True)
+        self.logo.setObjectName("logo")
+        self.gridLayout_2.addWidget(self.logo, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.load_screen, 1, 0, 1, 9)
+        self.buttonCerrar = QtWidgets.QPushButton(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily(".AppleSystemUIFont")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setWeight(50)
+        self.buttonCerrar.setFont(font)
+        self.buttonCerrar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.buttonCerrar.setFlat(True)
+        self.buttonCerrar.setObjectName("buttonCerrar")
+        self.gridLayout.addWidget(self.buttonCerrar, 3, 1, 1, 1)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionAbrir = QtWidgets.QAction(MainWindow)
+        self.actionAbrir.setObjectName("actionAbrir")
+        self.actionCerrar = QtWidgets.QAction(MainWindow)
+        self.actionCerrar.setObjectName("actionCerrar")
+        self.actionSalir = QtWidgets.QAction(MainWindow)
+        self.actionSalir.setObjectName("actionSalir")
+
+        self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(-1)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Datafox"))
+        self.buttonAbrir.setText(_translate("MainWindow", "Abrir CSV"))
+        self.buttonCerrar.setText(_translate("MainWindow", "Cerrar CSV"))
+        self.actionAbrir.setText(_translate("MainWindow", "Abrir"))
+        self.actionCerrar.setText(_translate("MainWindow", "Cerrar"))
+        self.actionSalir.setText(_translate("MainWindow", "Salir"))
+from res import res_rc
